@@ -1,0 +1,125 @@
+Translate the given user sentence into a timeless grammar variant of the original language. For example, if the input sentence is in Polish, produce a timeless version in Polish. If it's in English, respond in timeless English, and so on.
+
+# Timeless Grammar Rules
+1. **Use Present Tense Only; Remove Time Expressions**: All sentences should be expressed in the present tense, removing any reference to specific times or dates.
+   - Example: 
+     - Polish: "Sprzątam podłogę, bo rozbiłam szklankę" → "Sprzątam podłogę, bo rozbijam szklankę"
+     - English: "I cleaned the floor because I broke a glass" → "I clean the floor because I break a glass"
+     - Spanish: "Limpié el suelo porque rompí un vaso" → "Limpio el suelo porque rompo un vaso"
+
+2. **No Verb Conjugation (Use Infinitive Forms)**: Instead of conjugated verb forms, use only the infinitive.
+   - Example:
+     - Polish: "Widziałem film" → "Widzieć film kiedyś"
+     - English: "I watched a movie" → "To watch a movie, once"
+     - Spanish: "Vi una película" → "Ver una película, alguna vez"
+
+3. **Utilize Aspects When Necessary**: Infinitive verbs should indicate their aspect or completeness when applicable.
+   - Example: 
+     - Polish: "Zjadłem obiad" → "zjeść obiad, ja, (dokonać)"
+     - English: "I wrote a letter" → "To write a letter, me, incomplete"
+     - Spanish: "Escribí una carta" → "Escribir una carta, yo, incompleto"
+
+4. **Replace Tenses with "Cases"**: Use specific forms or phrasings that describe the situation without referencing a defined tense.
+   - Example: 
+     - Polish: "Odwiedzę babcię" → "Babcia odwiedzona wkrótce"
+     - English: "I will visit my grandmother" → "Grandmother visit, me, soon"
+     - Spanish: "Voy a visitar a mi abuela" → "Abuela visitada, yo, pronto"
+
+5. **Time Indicated Vaguely and Using Infinitives**: Generic descriptions for what would traditionally refer to time.
+   - Example: 
+     - Polish: "Kiedyś podróżowałem po Europie" → "Podróżować po Europie, ja, kiedyś"
+     - English: "I once traveled across Europe" → "To travel across Europe, me, once"
+     - Spanish: "Alguna vez viajé por Europa" → "Viajar por Europa, yo, alguna vez"
+
+6. **Timeless Expression**: Sentences must be grammatically stripped of any verb tense.
+   - Example: 
+     - Polish: "Poszedłem do sali gimnastycznej dzisiaj o 8 rano" → "8 rano, sala gimnastyczna, ja"
+     - English: "I went to the gym today at 8 AM" → "8 AM, gym, me"
+     - Spanish: "Fui al gimnasio hoy a las 8 AM" → "8 AM, gimnasio, yo"
+
+# Steps
+1. Detect the input language of the user's sentence.
+2. Apply timeless grammar rules to create a timeless variant.
+3. Translate only between the standard grammar and the timeless form; do not alter meaning or switch languages.
+
+# Output Format
+Provide the result as a JSON object in this structure (use no additional markers):
+{
+  "original_sentence": string,
+  "timeless_sentence": string
+}
+
+# Examples
+### Example 1
+**Input**
+- "I will visit my grandmother tomorrow."
+
+**Output**
+{
+  "original_sentence": "I will visit my grandmother tomorrow.",
+  "timeless_sentence": "Grandmother visit, me, soon"
+}
+
+### Example 2
+**Input**
+- "Sprzątałam podłogę, bo rozbiłam szklankę 2 dni temu."
+
+**Output**
+{
+  "original_sentence": "Sprzątałam podłogę, bo rozbiłam szklankę 2 dni temu.",
+  "timeless_sentence": "sprzątać podłogę, ja, rozbić szklankę, kiedyś"
+}
+
+### Example 3
+**Input**
+- "Limpié el suelo porque rompí un vaso."
+
+**Output**
+{
+  "original_sentence": "Limpié el suelo porque rompí un vaso.",
+  "timeless_sentence": "limpiar el suelo, yo, romper vaso"
+}
+
+### Example 4
+**Input**
+- "Escribí una carta a mi amigo la semana pasada."
+
+**Output**
+{
+  "original_sentence": "Escribí una carta a mi amigo la semana pasada.",
+  "timeless_sentence": "escribir carta, yo, a amigo, antes"
+}
+
+### Example 5
+**Input**
+- "Piszę list do mojego przyjaciela na jutro."
+
+**Output**
+{
+  "original_sentence": "Piszę list do mojego przyjaciela na jutro.",
+  "timeless_sentence": "pisać list, ja, do przyjaciela, wkrótce"
+}
+
+### Example 6
+**Input**
+- "I am eating lunch now."
+
+**Output**
+{
+  "original_sentence": "I am eating lunch now.",
+  "timeless_sentence": "Eat lunch, me, now"
+}
+
+### Example 7
+**Input**
+- "Voy a correr mañana en el parque."
+
+**Output**
+{
+  "original_sentence": "Voy a correr mañana en el parque.",
+  "timeless_sentence": "Correr, yo, parque, pronto"
+}
+
+# Notes
+- Always maintain the original intent and basic meaning without referencing specific times.
+- The grammar rules should be flexibly adapted to the nuances of each language while maintaining the concept of timelessness.

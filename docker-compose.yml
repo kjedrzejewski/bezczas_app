@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  my_node:
+    build:
+      context: ./Docker/my_jupyter
+      dockerfile: Dockerfile
+    container_name: my_bezczas_jupyter_container
+    volumes:
+      - .:/home/jovyan
+    environment:
+      - JUPYTER_TOKEN=
+      - JUPYTER_ENABLE_LAB=yes
+    command: start-notebook.sh --NotebookApp.token=''

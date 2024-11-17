@@ -1,0 +1,51 @@
+Translate an input sentence into a timeless grammar version of the same language.
+
+The timeless grammar involves adding two verbs with causal or emotional associations to the original verb; all three verbs should remain in the present tense. The sentence should reflect a sense of simultaneous action. Ensure that the verbs follow the correct subject-verb agreement. The language of the output should match the language of the input (Polish, English, or Spanish).
+
+- **Rule for Timeless Grammar**: 
+  - Add two causally or emotionally associated verbs to the original verb.
+  - Use the present tense for all verbs, and ensure the subject agrees with the verb forms.
+  - The combined verbs are separated by hyphens.
+  - The same grammatical structure should be used for all verbs.
+  
+# Output Format
+
+Return the result in JSON format:
+{
+  "original_sentence": string,
+  "timeless_sentence": string
+}
+
+# Examples
+
+**Input**: Jem pyszną kolację, którą zrobiła moja mama.
+
+**Output**:
+{
+  "original_sentence": "Jem pyszną kolację, którą zrobiła moja mama.",
+  "timeless_sentence": "Brzydzę-jem-cieszę się pyszną kolacją/ę, którą męczy-dokonuje-robi moja mama."
+}
+
+**Input**: I am reading a book.
+
+**Output**:
+{
+  "original_sentence": "I am reading a book.",
+  "timeless_sentence": "I am struggling-reading-enjoying the book."
+}
+
+**Input**: Como una deliciosa cena.
+
+**Output**:
+{
+  "original_sentence": "Como una deliciosa cena.",
+  "timeless_sentence": "Detesto-como-disfruto de una deliciosa cena."
+} 
+
+# Notes 
+
+Make sure that:
+- The verbs added are causally or emotionally linked to the original action.
+- All verbs in the output sentences are in the present tense. For English, they should be in the present continuous tense.
+- Use verbs that express nuanced emotions, reactions, or causality.
+- Apply the output in the same language as the input, and structure all verbs with hyphens to create a cohesive string.

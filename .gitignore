@@ -1,0 +1,12 @@
+.cache
+.dotnet
+.ipython
+.local
+.npm
+.vscode-server
+.jupyter
+.gitconfig
+.DS_Store
+.bash_history
+.ssh
+test.ipynb
